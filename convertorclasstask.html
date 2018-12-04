@@ -1,0 +1,166 @@
+<!Doctype html>
+<html>
+<head>
+<style>
+body{
+   background-color:DodgerBlue;
+}
+.one{ 
+   background-color:white;
+   margin-left:320px;
+   border:2px solid black;
+   border-radius:10px;
+   width:50%;
+   height:350px;
+ 
+}
+.two{
+    background-color:white;
+    margin-left:320px; 
+	border:2px solid black;
+    border-radius:10px;
+    width:50%;
+    height:300px;
+}
+.three{
+   background-color:white;
+   margin-left:320px; 
+   border:2px solid black;
+   border-radius:10px;
+   width:50%;
+   height:300px;
+}
+.four{
+   background-color:white;
+    margin-left:320px; 
+   border:2px solid black;
+   border-radius:10px;
+   width:50%;
+   height:300px;
+}
+
+</style>
+ <script>
+     var pi=3.14;
+	 var ageMulti=7;
+	 function circleCalculator(){
+	    var radius=document.getElementById('inputRadius').value;
+	    var area=pi*radius*radius;
+		document.getElementById('area').value=area;
+		var circumference=2*pi*radius;
+		document.getElementById('circum').value=circumference;
+	 }
+	 function ageCalculator(){
+		var age=document.getElementById('years').value;
+		document.getElementById('petage').value=age*ageMulti;
+	 }
+	 function CelciusToFahrenheit(){
+	    var c=document.getElementById('inputCelsius').value;
+		var farhenite=0;
+		farhenite=((c*9/5)+32);
+		document.getElementById('txt1').value=farhenite
+	 
+	 }
+	 function FahrenheitToCelcius(){
+	   var f=document.getElementById("inputFahrenheit").value;
+	   var celcius=0;
+	   celcius=((f-32)*5/9);
+	   document.getElementById('txt').value=celcius;
+	 }
+	  function fortunetter(){
+	     var N=document.getElementById('child').value;
+		 var Z=document.getElementById('partner').value;
+		 var X=document.getElementById('title').value;
+		 var y=document.getElementById('location').value;;
+		 alert("you have "+N+"  childrens.your partner is:"+Z+" and your job is:"+X+" and location:"+y);
+	 
+	 }
+ </script>
+
+
+</head>
+<body>
+<div class="one">
+<h2>Temperature Converter</h2>
+<p style="font-size:19px;">Type a value in the Fahrenheit field to convert the value to Celsius:</p>
+  <label>Fahrenheit</label>
+  <input id="inputFahrenheit" placeholder="Enter Temperature in Fahrenheit" type="text" size="45" style="border:2px solid black;border-radius:5px;font-size:15px;">
+  </br>
+  <label>Celsius</label>
+  <input id="txt" type="text" size="45" style="border:2px solid black;border-radius:5px;font-size:15px;margin:20px">
+  </br>
+  <button type="button" style="margin-left:190px" onclick="FahrenheitToCelcius()">Fahrenheit To Celcius</button>
+  </br>
+  <label>Celsius</label>
+  <input id="inputCelsius" placeholder="Enter Temperature in Celcius" type="text"  size="45" style="border:2px solid black;border-radius:5px;font-size:15px;margin:20px" >
+  </br>
+  <label>Fahrenheit</label>
+  <input id="txt1" type="text" size="45" style="border:2px solid black;border-radius:5px;font-size:15px;">
+  </br>
+  </br>
+  <button type="button" style="margin-left:190px" onclick="CelciusToFahrenheit()">Celcius To Fahrenheit</button>
+  </br>
+  </br>
+</div>
+</br>
+</br>
+<div class="two">
+<h2>Circle Calculator</h2>
+<p>Type the radius of the circle</p>
+<label>Radius</label>
+  <input id="inputRadius" placeholder="Enter Radius" type="text"  size="45" style="border:2px solid black;border-radius:5px;font-size:15px;margin-left:53px">
+  </br>
+  </br>
+<label>Area</label>
+  <input id="area" type="text"  size="45" style="border:2px solid black;border-radius:5px;font-size:15px;margin-left:65px">
+  </br>
+  </br>
+<label>Circumference</label>
+  <input id="circum" type="text"  size="45" style="border:2px solid black;border-radius:5px;font-size:15px;"">
+  </br>
+  </br>
+  <button type="button" style="margin-left:210px" onclick="circleCalculator()">Circle Calculator</button>
+</div>
+</br>
+</br>
+<div class="three">
+<h2>Pet Age Calculator</h2>
+<p>Type the name of your pet and its age</p>
+<label>Name: </label>
+ <input type="text"  placeholder="Enter Name" size="45" style="border:2px solid black;border-radius:5px;font-size:15px; margin-left:28px;">
+  </br>
+  </br>
+<label>Old Years: </label>  
+  <input type="text" id ="years" placeholder="Years old" size="45" style="border:2px solid black;border-radius:5px;font-size:15px;" >
+ </br>
+ </br>  
+<label>Pet Age</label>
+<input type="text" id ="petage" placeholder="Years old" size="45" style="border:2px solid black;border-radius:5px;font-size:15px;margin-left:17px">
+ </br>
+ </br>
+<button type="button" style="margin-left:210px" onclick="ageCalculator()">Age Calculator</button>
+</div>
+</br>
+</br>
+<div class="four">
+<h2>Fortune Teller</h2> 
+<label>No. of Children: </label>  
+  <input type="text" id ="child" placeholder="Enter Number of Child"  size="45" style="border:2px solid black;border-radius:5px;font-size:15px;margin-left:40px;"> 
+   </br>
+   </br>
+<label>Partners Name: </label>  
+  <input type="text" id ="partner" placeholder="Enter Partner Name" size="45" style="border:2px solid black;border-radius:5px;font-size:15px;margin-left:46px;"> 
+   </br>
+   </br>
+<label>Geographic location: </label>  
+  <input type="text" id ="location" placeholder="Enter Location"  size="45" style="border:2px solid black;border-radius:5px;font-size:15px;margin-left:10px;">
+   </br>
+   </br>
+<label>Job Title: </label>  
+  <input type="text" id ="title" placeholder="Enter Job Title" size="45" style="border:2px solid black;border-radius:5px;font-size:15px;margin-left:85px" > 
+  </br>
+  </br>
+<button type="button" style="margin-left:300px" onclick="fortunetter()">Fortune teller</button>  
+</div>
+</body>
+</html>
